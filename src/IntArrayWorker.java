@@ -98,5 +98,19 @@ public class IntArrayWorker {
 		return count;
 	}
 
+	public int getLargest() {
+		int numCols = matrix[0].length;
+		int count = 0;
+		int largest = 0;
+		for (int row = 0; row < matrix.length; row++) {
+			for (int col = 0; col < numCols; col++) {
+				if (matrix[row][col] > largest) {
+					largest = matrix[row][col];
+				}
+			}
+		}
+		return largest;
+	}
+
 
 }
