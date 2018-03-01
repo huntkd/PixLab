@@ -85,4 +85,18 @@ public class IntArrayWorker {
 		}
 	}
 
+	public int getCount(int number) {
+		int numCols = matrix[0].length;
+		int count = 0;
+		for (int row = 0; row < matrix.length; row++) {
+			for (int col = 0; col < numCols; col++) {
+				if (matrix[row][col] == number) {
+					count++;
+				}
+			}
+		}
+		return count;
+	}
+
+
 }
