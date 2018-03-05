@@ -106,6 +106,14 @@ public class PictureTester
     swan.edgeDetection(10);
     swan.explore();
   }
+
+  public static void testMirrorArms()
+  {
+    Picture snowman = new Picture("snowman.jpg");
+    snowman.explore();
+    snowman.mirrorArms();
+    snowman.explore();
+  }
   
   /** Main method for testing.  Every class can have a main
     * method in Java */
@@ -119,14 +127,14 @@ public class PictureTester
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
     //testNegate();
-    testMirrorTemple();
+    // testMirrorTemple();
     // testGrayscale();
     //testFixUnderwater();
     // testMirrorVertical();
     // testMirrorVerticalRightToLeft();
     // testMirrorHorizontal();
     // testMirrorHorizontalBotToTop();
-    //testMirrorArms();
+    testMirrorArms();
     //testMirrorGull();
     // testMirrorDiagonal();
     //testCollage();
