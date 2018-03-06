@@ -317,16 +317,30 @@ public class Picture extends SimplePicture {
 
 	/** Method to create a collage of several pictures */
 	public void createCollage() {
-		Picture image1 = new Picture("butterfly1.jpg");
-		Picture image2 = new Picture("arch.jpg");
-		this.copy(image1, 0, 0, 50, 100, 0, 100);
-		this.copy(image2, 100, 0, 0, 200, 0, 200);
-		this.copy(image1, 200, 0);
-		Picture imageNoBlue = new Picture(image2);
-		imageNoBlue.zeroBlue();
-		this.copy(imageNoBlue, 300, 0);
-		this.copy(image1, 400, 0);
-		this.copy(image2, 500, 0);
+		Picture flower1 = new Picture("flower1.jpg");
+		Picture flower2 = new Picture("flower2.jpg");
+		this.copy(flower1,0,0);
+		this.copy(flower2,100,0);
+		this.copy(flower1,200,0);
+		Picture flowerNoBlue = new Picture(flower2);
+		flowerNoBlue.zeroBlue();
+		this.copy(flowerNoBlue,300,0);
+		this.copy(flower1,400,0);
+		this.copy(flower2,500,0);
+		this.mirrorVertical();
+		this.write("collage.jpg");
+	}
+
+	public void createMyCollage() {
+		Picture image1 = new Picture("beach.jpg");
+		Picture image3 = new Picture("femaleLionAndHall.jpg");
+		Picture image2 = new Picture("koala.jpg");
+		Picture image4 = new Picture("swan.jpg");
+		this.copy(image1, 0, 0);
+		this.copy(image2, 20, 0, 0, 100, 0, 100);
+		this.copy(image3, 200, 0);
+		this.copy(image4, 350, 0);
+		this.copy(image2, 400, 0, 50, 100, 100, 200);
 		this.mirrorVertical();
 		this.write("collage.jpg");
 	}
