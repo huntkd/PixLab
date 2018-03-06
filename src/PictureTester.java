@@ -107,6 +107,16 @@ public class PictureTester
     canvas.createCollage();
     canvas.explore();
   }
+
+  public static void testCopy()
+  {
+    Picture image1 = new Picture("butterfly1.jpg");
+    Picture image2 = new Picture("arch.jpg");
+    Picture image3 = new Picture("beach.jpg");
+    image3.copy(image2, 200, 0);
+    image3.copy(image1, 0, 0, 50, 100, 0, 100);
+    image3.explore();
+  }
   
   /** Method to test edgeDetection */
   public static void testEdgeDetection()
@@ -144,10 +154,10 @@ public class PictureTester
     // testMirrorHorizontal();
     // testMirrorHorizontalBotToTop();
     // testMirrorArms();
-    testMirrorGull();
+    // testMirrorGull();
     // testMirrorDiagonal();
-    //testCollage();
-    //testCopy();
+    // testCollage();
+    testCopy();
     //testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();
